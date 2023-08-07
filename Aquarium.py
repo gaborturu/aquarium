@@ -75,6 +75,8 @@ class Tank:
             volume: water volume in liters
             headspace: headspace volume in liters
             KH: carbonate hardness in dKH units
+            room_CO2_equilibrium: water CO2 concentration in equilibrium with the air surrounding the aquarium in mg/l
+            room_O2_equilibrium: water O2 concentration in equilibrium with the air surrounding the aquarium in mg/l
         """
         
         self.volume = volume
@@ -127,7 +129,7 @@ class Tank:
         
     def data_to_df(self):
         """
-        Collects all data into a dataframe
+        Collects all CO2/O2 data into a dataframe
         """
         
         cols = ["CO2 (mg/l)", "CO2 (mg)", "O2 (mg/l)", "O2 (mg)", "pH"]
